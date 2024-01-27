@@ -9,9 +9,9 @@ html, body {
     font-size: 16px;
     font-family: 'Work Sans', sans-serif;
     line-height: 1.5;
-    background-color: #af5d74;
-    
 }
+
+
 
 
 
@@ -25,7 +25,8 @@ html, body {
 
 .general {
     height: 100%;
-    background-color: #ed85a2;
+    /* background-color: #ed85a2; */
+    background: linear-gradient(135deg, #da7390, #8471c7);
     padding: 20px;
     box-shadow: 0px 0px 100px 3px #af5d74;
 
@@ -253,6 +254,8 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
+    
+
 }
 
 .modal-content {
@@ -269,27 +272,38 @@ html, body {
 #albumText {
     color: #fff;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 
 #albumModal {
     display: none; /* Добавьте это, чтобы скрыть модальное окно по умолчанию */
-    position: fixed;
-    top: 0;
-    left: 0;
+
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    z-index: 99;
+
+    position: fixed;
+    top: 0%;
+    left: 0%;
+
 }
 
 .modal-content {
     border: 2px solid #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     background-color: #737373; /* Цвет фона контента */
     margin: 10% auto; /* Центрирование по вертикали, можно настроить по вашему желанию */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    height: auto;
+
+
 }
 
 /* ... (ваш текущий CSS код) ... */
@@ -305,10 +319,12 @@ html, body {
 
 /* Стили для изображений */
 .modal-content img {
-    width: 35%; /* Каждое изображение будет занимать 1/3 ширины контейнера */
+    width: 27%; /* Каждое изображение будет занимать 1/3 ширины контейнера */
     height: auto;
     margin: 5px; /* Небольшие отступы между изображениями */
     display: inline-block; /* Для размещения изображений в одной строке */
+    box-sizing: border-box;
+    object-fit: cover;
 }
 
 /* Стили для оригинального изображения */
@@ -317,19 +333,30 @@ html, body {
     max-height: 100%;
     margin: auto;
     display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Add new styles for the enlarged image */
+
+/* Дополнительные стили для центрирования увеличенного изображения */
 #albumModal .enlarged-image-container {
     text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Устанавливаем z-index выше, чем у фона */
 }
 
 #albumModal .enlarged-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
+    max-width: 80%; /* Устанавливаем максимальную ширину изображения */
+    max-height: 80%; /* Устанавливаем максимальную высоту изображения */
     display: block;
+    margin: auto;
 }
+
 
 
 
@@ -536,7 +563,7 @@ html, body {
 
 
 .descrpition3 {
-    
+    margin-top: 10px;
     font-size: 15px;
     color: white;
     text-indent: 1em;
@@ -545,6 +572,92 @@ html, body {
     margin-bottom: 10px;
 }
 
+
+
+
+
+.quest {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1 {
+    text-align: center;   
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
+.questvopr {
+    text-align: center;   
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+
+    margin-top: 10px;
+    font-size: 17px;
+    color: white;
+    font-weight: bolder;
+
+    margin-bottom: 10px;
+}
+
+
+#riddleForm {
+    text-align: center;
+    display: flex;
+}
+
+#answerInput {
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    margin-right: 10px;
+    width: 200px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#answerInput:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+button {
+    padding: 6px 12px;
+    font-size: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+
+.end {
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    text-indent: 1em;
+    text-align: justify;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
 
   
 
@@ -562,4 +675,6 @@ html, body {
         transform: translateY(100vh);
     }
 }
+
+
 

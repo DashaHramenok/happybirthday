@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     
             // Добавляем обработчик события для кнопки закрытия альбома
+            closeBtn = document.getElementById("closeBtn");
             closeBtn.onclick = function () {
                 albumModal.style.display = "none";
                 albumText.style.display = "none";
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
             // Сбрасываем переменную originalContent после восстановления
             originalContent = null;
-
+    
             // Проверяем наличие кнопки закрытия и добавляем обработчик события
             var closeOriginalBtn = document.querySelector("#albumModal .close");
             if (closeOriginalBtn) {
@@ -72,6 +73,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 };
             }
         }
+    
+        // Добавляем обработчик события для кнопки закрытия альбома
+        closeBtn = document.getElementById("closeBtn");
+        closeBtn.onclick = function () {
+            albumModal.style.display = "none";
+            albumText.style.display = "none";
+            resetAlbumContent(); // Сброс содержимого альбома
+        };
+    
+    
 
         // Добавляем обработчик события для кнопки закрытия альбома
         closeBtn.onclick = function () {
