@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С днем рождения!</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #albumBtn {
+            background-color: #bd3c89; /* Зеленый цвет */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #albumBtn:hover {
+            background-color: #45a049; /* Зеленый цвет с темным оттенком при наведении курсора */
+        }
+    </style>
+    <link href="/snowFlakes/snow.min.css" rel="stylesheet">
     <bgsound src="music.mp3" loop="1" volume="-1000" balance="0" />
 </head>
 <body>
+    
+
     <div class="main">
         <div class="general">
+            <div class="texttt">(тыкай на экран<br>чтобы ставить<br>музыку на паузу)</div>
             <img class="image1" src="imgs/img1.png" alt="hearts">
             <div class="headtext">! С ДНЕМ РОЖДЕНИЯ, ДАШЕЧКА !</div>
             <div class="desctext">Моя любимая даша, поздравляю тебя с Днем рождения. Прости меня за все, что я тебе сделал. Я очень старался над этим подарком. Досмотри до конца</div>
@@ -44,12 +67,91 @@
                     <img src="imgs/dasha4.jpg" alt="Фото 4">
                 </div>
             </div>
+
+            
+            <div class="descrpition">
+                <div class="line">
+                    <div class="text">🎔</div>
+                </div>
+                <div class="text2">
+                    Вот посмотри, какая ты красивая!!! Я очень долго думал над подарком и у меня было много вариантов, что тебе подарить, у меня также до сих пор куча не доделанных подарков, которые я хочу тебе отправить, но увы, у меня это не получилось. Поэтому, я решил все свои лучшие навыки, вложить в это. Я очень надеюсь, что тебе понравится  мой подарок и ты досмотришь этот сайт до самого конца, потому что я очень старался. Но сначала, извини меня пожалуйста за все. Я желаю тебе всего самого наилучшего, оставаться такой же искренней, доброй, красивой и уникальной. Я тебя обожаю, даша 
+                </div>
+                
+                
+            </div>
+
+
+
+            <div class="descrpition2">
+                А теперь.... Давай посмотрим на нашего любимого симбочку:>
+            </div>
+
+            <button id="albumBtn">СИМБА</button>
+
+            <div id="albumModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeBtn">&times;</span>
+                    <div id="albumText">Нажми на картинку, чтобы увеличить ее</div>
+                    <!-- Здесь будут ваши фотографии -->
+                    <img src="imgs/simba/1.jpg" alt="Photo 1">
+                    <img src="imgs/simba/2.jpg" alt="Photo 2">
+                    <img src="imgs/simba/3.jpg" alt="Photo 3">
+                    <img src="imgs/simba/4.jpg" alt="Photo 4">
+                    <!-- Добавьте свои фотографии по аналогии -->
+                </div>
+            </div>
+            
+
+            <div class="descrpition2">
+                Вот такой вот у нас миленький симбочка. Я тоже его очень сильно люблююююююююююю
+            </div>
+
+            <div class="line">
+                <div class="text">🎔</div>
+            </div>
+
+            <div class="catgif"></div>
+
+            <div class="line">
+                <div class="text">🎔</div>
+            </div>
+
+
+            <div class="lastgift">
+                <div class="descrpition2">Снизу я хочу показать подарок, который не смог подарить...:< Из-за того, что тупой вк блокирует своими капчами мое сообщение. Если у тебя есть телеграм, то я могу показать эту анимацию там.. Ну а пока, можешь ее посмотреть на сайте, ехеххе</div>
+                <div class="video" id="animatedGif"></div>
+            </div>
+
+            <div class="line">
+                <div class="text">🎔</div>
+            </div>
+
+            <div class="descrpition2">Ну и куда же без маленькой открытки!</div>
+
+            <div class="birthdayCard">
+                <div class="cardFront"><h3 class="happy">HAPPY BIRTHDAY!<br>*нажми*</h3>
+                    
+                <div class="balloons">
+                  <div class="balloonOne"></div>
+                  <div class="balloonTwo"></div>
+                  <div class="balloonThree"></div>
+                  <div class="balloonFour"></div>
+                </div>
+                </div>
+                <div class="cardInside">
+                    <h3 class="back">HAPPY BIRTHDAY!</h3>
+                    <p>дорогая даша,</p> 
+                    <p>С днем рождения!! Счастливого дня и всего всего самого наилучшего. Я обожаю и сильно беспокоюсь за тебя<br>- Сеня.</p>
+                  </div>
+                </div>
+            <div class="descrpition3">Ты бы знала как я пропыхтел, чтобы научиться ее делать</div>
+
         </div>
 
 
 
     </div>    
-
+    
     <audio id="backgroundMusic" loop>
         <source src="music.mp3" type="audio/mp3">
         <!-- Дополнительные источники для поддержки разных форматов, если это необходимо -->
@@ -59,7 +161,16 @@
     </audio>
     
     <!-- Ваш контент сайта -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+    <script src="script.js"></script> 
+    <script src="script2.js"></script>
+    <script src="snowfall.js"></script> 
     
+    <!-- <script src="/snowFlakes/Snow.js"></script>
+    <script>
+        new Snow ();
+    </script> -->
     <script>
         // Включение/выключение музыки по щелчку на странице
         document.addEventListener("click", function() {
@@ -77,6 +188,7 @@
         <!-- <source src="путь_к_вашему_аудиофайлу.wav" type="audio/wav"> -->
         Ваш браузер не поддерживает аудио-элемент.
     </audio>
+    
 </body>
 </html>
 

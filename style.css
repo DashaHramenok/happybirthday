@@ -15,6 +15,7 @@ html, body {
 
 
 
+
 .main { 
     display: flex;
     justify-content: center;
@@ -28,6 +29,15 @@ html, body {
     padding: 20px;
     box-shadow: 0px 0px 100px 3px #af5d74;
 
+}
+
+.texttt {
+    position: absolute;
+    color: white;
+    transform: rotate(20deg);
+    margin-top: 10px;
+    
+    font-size: 12px;
 }
 
 .image1 {
@@ -218,3 +228,338 @@ html, body {
 .photo:hover img {
     transform: scale(1.1);
 }
+
+
+
+
+.text2 {
+    margin-top: 50px;
+    font-size: 15px;
+    color: white;
+    text-indent: 1em;
+    text-align: justify;
+}
+
+
+
+
+
+/* Скрыть всплывающее окно по умолчанию */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* ... (ваш текущий CSS код) ... */
+
+/* Стили для текста в альбоме */
+#albumText {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+
+#albumModal {
+    display: none; /* Добавьте это, чтобы скрыть модальное окно по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #737373; /* Цвет фона контента */
+    margin: 10% auto; /* Центрирование по вертикали, можно настроить по вашему желанию */
+}
+
+/* ... (ваш текущий CSS код) ... */
+
+
+/* Кнопка закрытия */
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Стили для изображений */
+.modal-content img {
+    width: 35%; /* Каждое изображение будет занимать 1/3 ширины контейнера */
+    height: auto;
+    margin: 5px; /* Небольшие отступы между изображениями */
+    display: inline-block; /* Для размещения изображений в одной строке */
+}
+
+/* Стили для оригинального изображения */
+.original-image {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+/* Add new styles for the enlarged image */
+#albumModal .enlarged-image-container {
+    text-align: center;
+}
+
+#albumModal .enlarged-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+
+.descrpition2 {
+    margin-top: 50px;
+    font-size: 15px;
+    color: white;
+    text-indent: 1em;
+    text-align: justify;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+
+
+.video {
+    height: 168px;
+    width: calc(382/2);
+    background-image: url(imgs/movie1.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    animation: play 1s infinite;
+    opacity: 0;
+}
+
+@keyframes play {
+    0%, 100% {
+        opacity: 0.99;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.birthdayCard {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px) scale(0.75);
+    transition: 1s;
+    margin: 0 auto; /* Center the card */
+}
+  
+.cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: .6s;
+}
+  
+  .happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin:30px; 
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    transition: .1s;
+  }
+  
+    .balloons {
+    position: absolute;
+  }
+  
+  .balloonOne, .balloonTwo, .balloonThree, .balloonFour {
+    position: absolute;
+    width: 85px;
+    height:95px;
+    border-radius:50%;
+  }
+  
+  .balloonOne {
+    background-color: rgb(239, 71, 111, 0.7);
+    left:-10px;
+    top:50px;
+  }
+  
+  .balloonTwo {
+    background-color: rgb(6, 214, 160, 0.7);
+    left:50px;
+    top:20px;
+  }
+  
+  .balloonThree {
+    background-color: rgb(255, 209, 102, 0.7);
+    left:110px;
+    top:50px;
+  }
+  
+  .balloonFour {
+    background-color: rgb(17, 138, 178, 0.7);
+    left:170px;
+    top:20px;
+  }
+  
+  .balloonOne:before, .balloonTwo:before, .balloonThree:before, .balloonFour:before {
+    content:"";
+    position: absolute;
+    width:1px;
+    height: 155px;
+    background-color: #ffd166;
+    top:95px;
+    left:43px;
+  }
+  .balloonOne:after, .balloonTwo:after, .balloonThree:after, .balloonFour:after 
+  {
+    content:"";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top:94px;
+    left:37px;
+  }
+  
+  .balloonOne:after {
+    border-bottom: 10px solid #ef476f;
+  }
+  
+  .balloonTwo:after {
+    border-bottom: 10px solid #06d6a0;
+  }
+  
+  .balloonThree:after {
+    border-bottom: 10px solid #ffd166;
+  }
+  
+  .balloonFour:after {
+    border-bottom: 10px solid #118ab2;
+  }
+  
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid yellowgreen;
+    width: 250px;
+    height:350px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+  }
+  
+  p {
+    font-family: cursive;
+    margin: 40px;
+    color: #333;
+  }
+  
+  .name {
+    position: absolute;
+    left:150px;
+    top:200px;
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  .back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin:30px; 
+    outline-color:#333;
+    outline-style: dotted;
+  }
+  
+  .birthdayCard:hover {
+      transform: perspective(2500px) rotate(5deg) scale(0.90);
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 0 10px 100px rgba(0,0,0,0.5);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+  }
+  
+  .birthdayCard:hover .happy {
+    visibility:hidden; 
+  }
+
+
+
+.descrpition3 {
+    
+    font-size: 15px;
+    color: white;
+    text-indent: 1em;
+    text-align: justify;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+
+  
+
+.snowflake {
+    position: fixed; /* Изменим позицию на fixed */
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation-fill-mode: both; /* Добавим это свойство */
+}
+
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
