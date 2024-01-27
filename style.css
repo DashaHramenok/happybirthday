@@ -35,8 +35,8 @@ html, body {
 .texttt {
     position: absolute;
     color: white;
-    transform: rotate(20deg);
-    margin-top: 10px;
+    transform: rotate(6deg);
+    margin-top: 4px;
     
     font-size: 12px;
 }
